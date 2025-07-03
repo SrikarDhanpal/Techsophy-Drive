@@ -1,252 +1,147 @@
+/* Overall layout */
 .dashboard-container {
-  max-width: 900px;
+  max-width: 1250px;
   margin: 40px auto;
   padding: 30px;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #f9fafb;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
+/* Title */
 .dashboard-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #2e2e2e;
+  margin-bottom: 32px;
   text-align: center;
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: #333;
 }
 
+/* Statistic Cards */
 .stats-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
 }
 
-.card {
-  flex: 1 1 30%;
-  background-color: white;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 10px;
+.stat-card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
   text-align: center;
-  transition: box-shadow 0.2s ease;
+  transition: all 0.25s ease;
 }
 
-.card:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.stat-card:hover {
+  transform: scale(1.015);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.card h3 {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 10px;
+.stat-label {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.card p {
-  font-size: 24px;
+.stat-value {
+  font-size: 28px;
   font-weight: bold;
-  color: #007bff;
+  color: #27ae60;
 }
 
-.quick-links {
-  margin-top: 40px;
-  text-align: center;
+/* Table container */
+.student-table-section {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  margin-bottom: 40px;
 }
 
-.quick-links button {
-  margin: 0 10px;
-  padding: 12px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.quick-links button:hover {
-  background-color: #0056b3;
-}
-
-.student-list-section {
-  margin-top: 40px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
+/* Table Header */
 .student-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
+.student-header h3 {
+  font-size: 20px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Sort button */
 .sort-button {
-  background-color: #007bff;
+  background-color: #555;
   color: white;
-  border: none;
   padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
   border-radius: 6px;
+  border: none;
   cursor: pointer;
-  font-size: 14px;
+  transition: all 0.2s ease;
 }
 
 .sort-button:hover {
-  background-color: #0056b3;
+  background-color: #333;
 }
 
-.student-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.student-item {
-  padding: 10px 12px;
-  border-bottom: 1px solid #eee;
-  font-size: 16px;
-}
-
-.student-item:last-child {
-  border-bottom: none;
-}
-
-.student-item {
-  border-bottom: 1px solid #eee;
-  padding: 10px 12px;
-  cursor: pointer;
-}
-
-.student-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 16px;
-}
-
-.gpa-tag {
-  font-size: 14px;
-  color: #007bff;
-  font-weight: bold;
-}
-
-.student-details {
-  margin-top: 8px;
-  background: #f1f1f1;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.subject-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.subject-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 6px 4px;
-  border-bottom: 1px dashed #ccc;
-  font-size: 15px;
-}
-
-.subject-item:last-child {
-  border-bottom: none;
-}
-
-.no-grades {
-  font-size: 14px;
-  color: #777;
-}
-
-.student-block {
-  padding: 16px;
-  border-bottom: 1px solid #ddd;
-  background-color: #ffffff;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
-
-.student-name-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 17px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 8px;
-}
-
-.student-name {
-  color: #222;
-}
-
-.gpa-tag {
-  font-size: 14px;
-  font-weight: normal;
-  color: #007bff;
-}
-
-.subject-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 4px;
-}
-
-.subject-item {
-  display: flex;
-  justify-content: space-between;
-  font-size: 15px;
-  padding: 6px 8px;
-  border-bottom: 1px dashed #eee;
-}
-
-.subject-item:last-child {
-  border-bottom: none;
-}
-
-.no-grades {
-  color: #777;
-  padding: 8px;
-  font-style: italic;
-}
-
-.student-table-section {
-  margin-top: 40px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  overflow-x: auto;
-}
-
+/* Table itself */
 .student-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
-}
-
-.student-table th,
-.student-table td {
-  padding: 12px 16px;
-  border: 1px solid #e0e0e0;
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .student-table th {
-  background-color: #f3f3f3;
-  font-weight: bold;
+  background-color: #f3f4f6;
+  padding: 12px;
+  color: #4b5563;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
 }
 
-.student-table tr:hover {
+.student-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.student-table tbody tr:hover {
   background-color: #f9f9f9;
 }
 
-.student-table td strong {
-  color: #007bff;
+/* Quick nav buttons */
+.quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.nav-button {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #1f845a;
+  transform: translateY(-2px);
+}
+
+.nav-button a {
+  color: white;
+  text-decoration: none;
 }
