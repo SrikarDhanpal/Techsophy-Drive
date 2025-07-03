@@ -1,0 +1,252 @@
+.dashboard-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 30%;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.quick-links {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.quick-links button {
+  margin: 0 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.quick-links button:hover {
+  background-color: #0056b3;
+}
+
+.student-list-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.student-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.sort-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sort-button:hover {
+  background-color: #0056b3;
+}
+
+.student-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.student-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
+.student-item:last-child {
+  border-bottom: none;
+}
+
+.student-item {
+  border-bottom: 1px solid #eee;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.student-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.gpa-tag {
+  font-size: 14px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.student-details {
+  margin-top: 8px;
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.subject-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.subject-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 4px;
+  border-bottom: 1px dashed #ccc;
+  font-size: 15px;
+}
+
+.subject-item:last-child {
+  border-bottom: none;
+}
+
+.no-grades {
+  font-size: 14px;
+  color: #777;
+}
+
+.student-block {
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.student-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.student-name {
+  color: #222;
+}
+
+.gpa-tag {
+  font-size: 14px;
+  font-weight: normal;
+  color: #007bff;
+}
+
+.subject-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 4px;
+}
+
+.subject-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  padding: 6px 8px;
+  border-bottom: 1px dashed #eee;
+}
+
+.subject-item:last-child {
+  border-bottom: none;
+}
+
+.no-grades {
+  color: #777;
+  padding: 8px;
+  font-style: italic;
+}
+
+.student-table-section {
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow-x: auto;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.student-table th,
+.student-table td {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  font-size: 15px;
+}
+
+.student-table th {
+  background-color: #f3f3f3;
+  font-weight: bold;
+}
+
+.student-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.student-table td strong {
+  color: #007bff;
+}
